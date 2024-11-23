@@ -14,8 +14,10 @@ function App() {
 
   // upon loading the website, useEffect will kick in
   useEffect(() => {
-    console.log("here");
-    fetchUsers();
+    if(users.length === 0){
+      console.log("here");
+      fetchUsers();
+    }
   });
 
   return (
